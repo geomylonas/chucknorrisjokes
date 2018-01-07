@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 public class GetJokeImpl implements GetJoke{
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    @Autowired
-    public GetJokeImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    public GetJokeImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
+
 
     @Override
     public String recievejoke() {
